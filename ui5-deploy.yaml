@@ -14,9 +14,15 @@ builder:
       afterTask: generateCachebusterInfo
       configuration:
         log: 0
+        ignoreCertError: true
         target: 
           destination: BTP_HTTP
-          url: http://s4hana2020.themdlabs.com:8001
+          url: env:ABAP_BTP_URL
+          auth: basic
+          client: env:ABAP_BTP_CLIENT
+        credentials:
+          username: env:ABAP_BTP_USER
+          password: env:ABAP_BTP_PASSWORD
         app:
           name: ZFE_ALP_09
           description: Purchase App 10
