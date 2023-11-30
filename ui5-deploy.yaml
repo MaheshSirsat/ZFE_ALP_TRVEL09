@@ -17,12 +17,12 @@ builder:
         ignoreCertError: true
         target: 
           destination: BTP_HTTP
-          url: env:ABAP_BTP_URL
+          url: env:ABAP_URL
           auth: basic
-          client: env:ABAP_BTP_CLIENT
+          client: env:ABAP_CLIENT
         credentials:
-          username: env:ABAP_BTP_USER
-          password: env:ABAP_BTP_PASSWORD
+          username: env:ABAP_USER
+          password: env:ABAP_PASSWORD
         app:
           name: ZFE_ALP_09
           description: Purchase App 10
